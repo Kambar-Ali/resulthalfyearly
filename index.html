@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M. Muzaffar Husain Junior High School - Results</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+
+
+</head>
+<body>
+  <header>
+    <h1>M. Muzaffar Husain Junior High School</h1>
+    <p>Address: Barwar Kheri</p>
+    <p>Manager: Mr. Rahat Abbas | Principal: Mr. Nijam</p>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Check Your Exam Result</h2>
+      <form id="resultForm">
+        <label for="class">Select Class:</label>
+        <select id="class" required>
+          <option value="">Select Class</option>
+          <option value="4">Class 4</option>
+          <option value="5">Class 5</option>
+          <option value="6">Class 6</option>
+          <option value="7">Class 7</option>
+          <option value="8">Class 8</option>
+          <option value="9">Class 9</option>
+          <option value="10">Class 10</option>
+          <option value="11">Class 11</option>
+          <option value="12">Class 12</option>
+        </select>
+
+        <label for="rollNumber">Enter Roll Number:</label>
+        <input type="text" id="rollNumber" placeholder="e.g., 101" required>
+
+        <button type="submit">Get Result</button>
+      </form>
+    </section>
+
+    <section class="result-section" id="resultSection" style="display: none;">
+      <h2>Student Result</h2>
+      <p id="studentName"></p>  <!-- This is where the student's name will be displayed -->
+      <table>
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+          </tr>
+        </thead>
+        <tbody id="resultTable"></tbody>
+      </table>
+      <p><strong>Total Marks:</strong> <span id="totalMarks"></span></p>
+      <p><strong>Percentage:</strong> <span id="percentage"></span>%</p>
+      <button id="downloadButton" style="display: none;">Download Now</button>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Developed by Kambar Ali. All copyrights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
